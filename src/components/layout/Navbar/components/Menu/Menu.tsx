@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './Menu.module.scss';
 import { listMenu } from '@utils/constants/navbar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useLanguage from '@hooks/useLanguage';
 
 const Menu = () => {
     const dataLanguage = useLanguage();
+    const location = useLocation();
+
     const listItems = listMenu.map((item) => (
         <Link
             to={item.path}

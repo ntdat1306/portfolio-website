@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import styles from './Navbar.module.scss';
 import { Link } from 'react-router-dom';
 import useNavbar from '@hooks/useNavbar';
-import { SolarListOutline, SolarUndoLeftRoundOutline } from '@components/icon/Icon';
+import { SolarListOutline } from '@components/icon/Icon';
 import { Menu } from './components/Menu';
 import { Language } from './components/Language';
 import { Theme } from './components/Theme';
-import { AnimatePresence, motion } from 'framer-motion';
 import useClickOutside from '@hooks/useClickOutside';
+import { ResponsiveMenu } from './components/ResponsiveMenu';
 
 const Navbar = () => {
     const { logo, showExpand } = useNavbar();
@@ -16,6 +16,12 @@ const Navbar = () => {
 
     const handleToggle = () => {
         setExpand(!expand);
+    };
+
+    const responsiveMenuProps = {
+        expand,
+        expandRef,
+        handleToggle,
     };
 
     return (
@@ -45,39 +51,8 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
-            <AnimatePresence>
-                {expand && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ ease: 'easeInOut', duration: 0.2 }}
-                            className={styles['bg-blur']}
-                        ></motion.div>
-                        <motion.div
-                            initial={{ x: '-100%' }}
-                            animate={{ x: '0%' }}
-                            exit={{ x: '-100%' }}
-                            transition={{ ease: 'easeInOut', duration: 0.2 }}
-                            ref={expandRef}
-                            className={styles['responsive-menu']}
-                        >
-                            <div className={styles['header']}>
-                                <div className={styles['logo']}>
-                                    <div className={styles['icon']}>{logo}</div>
-                                    <div className={styles['text']}>NTD</div>
-                                </div>
-                                <div className={styles['btn-close']} onClick={handleToggle}>
-                                    <SolarUndoLeftRoundOutline />
-                                </div>
-                            </div>
-                            <div className={styles['list']}></div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
+            {/* Responsive */}
+            <ResponsiveMenu {...responsiveMenuProps} />
         </>
     );
 };

@@ -1,0 +1,85 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinIcon' as *;
+
+.responsive-menu {
+    position: fixed;
+    inset: 0;
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+    height: 100%;
+    width: 75%;
+    max-width: 24rem;
+    border-right: 1px solid rgb(var(--border));
+    box-shadow: var(--shadow-lg);
+    padding: 0 1rem;
+
+    @include responsive(portraitPhone) {
+        max-width: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--height-navbar);
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.25rem;
+                height: 2.25rem;
+
+                svg {
+                    border-radius: 50%;
+                    font-size: var(--font-l);
+                }
+            }
+
+            .text {
+                font-weight: 700;
+                letter-spacing: var(--letter-spacing-body-1);
+            }
+        }
+
+        .btn-close {
+            @include icon;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding-left: 2.25rem;
+
+        .item {
+            display: flex;
+            align-items: center;
+            border-radius: var(--radius-m);
+            opacity: 0.6;
+            transition: all 0.2s ease-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.bg-blur {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+}

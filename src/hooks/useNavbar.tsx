@@ -48,6 +48,8 @@ const useNavbar = () => {
         if (theme === 'light') setLogo(<SkillIconsHtmxDark />);
         if (theme === 'dark') setLogo(<SkillIconsHtmxLight />);
         if (theme === 'system') {
+            getPreferredColorScheme();
+            // Listen for change
             const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
             colorSchemeQuery.addEventListener('change', getPreferredColorScheme);
         }
