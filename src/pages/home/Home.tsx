@@ -10,15 +10,8 @@ const Home = () => {
             <div className={styles['container']}>
                 <div className={styles['line1']}>{dataLanguage?.page?.home?.hero?.line1}</div>
                 <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
-                <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
                 <div className={styles['line3']}>{dataLanguage?.page?.home?.hero?.line3}</div>
+                <div className={styles['line3']}>{dataLanguage?.page?.home?.hero?.line4}</div>
                 {/* <div className={styles['avatar']}>
                     <img src='' alt='' />
                 </div> */}

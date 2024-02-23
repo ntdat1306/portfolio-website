@@ -2,7 +2,7 @@ import { LanguageContext } from '@context/LanguageContext';
 import { listLanguage, listTheme } from '@utils/constants/navbar';
 import React, { useContext, useEffect, useState } from 'react';
 import useTheme from './useTheme';
-import { SkillIconsHtmxDark, SkillIconsHtmxLight } from '@components/icon/Icon';
+import { SkillIconsDevtoDark, SkillIconsDevtoLight } from '@components/icon/Icon';
 import useWindowSize from './useWindowSize';
 
 const useNavbar = () => {
@@ -13,17 +13,17 @@ const useNavbar = () => {
     const windowSize = useWindowSize();
     const flag = listLanguage.find((item) => item.key === language)?.icon;
     const mode = listTheme.find((item) => item.key === theme)?.icon;
-    const [logo, setLogo] = useState(<SkillIconsHtmxDark />);
+    const [logo, setLogo] = useState(<SkillIconsDevtoDark />);
     const showExpand = windowSize.width <= 768;
 
     const getPreferredColorScheme = () => {
         if (window.matchMedia) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setLogo(<SkillIconsHtmxLight />);
+                setLogo(<SkillIconsDevtoLight />);
             } else {
-                setLogo(<SkillIconsHtmxDark />);
+                setLogo(<SkillIconsDevtoDark />);
             }
-        } else setLogo(<SkillIconsHtmxDark />);
+        } else setLogo(<SkillIconsDevtoDark />);
     };
 
     const handleMouseEnter = (item: string) => {
@@ -45,8 +45,8 @@ const useNavbar = () => {
     };
 
     useEffect(() => {
-        if (theme === 'light') setLogo(<SkillIconsHtmxDark />);
-        if (theme === 'dark') setLogo(<SkillIconsHtmxLight />);
+        if (theme === 'light') setLogo(<SkillIconsDevtoDark />);
+        if (theme === 'dark') setLogo(<SkillIconsDevtoLight />);
         if (theme === 'system') {
             getPreferredColorScheme();
             // Listen for change

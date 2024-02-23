@@ -18,7 +18,8 @@ export const US = {
             hero: {
                 line1: "Hi, i'm Dat",
                 line2: 'ReactJS Developer',
-                line3: 'Basic portfolio base on shadcn/ui design',
+                line3: 'Welcome to my portfolio, scroll down to explore and hope you enjoy',
+                line4: 'Thanks for your time!',
                 download: 'Download CV',
             },
         },
