@@ -1,9 +1,9 @@
 import {
     EmojioneFlagForUnitedStates,
     EmojioneFlagForVietnam,
-    SolarLaptopMinimalisticOutline,
-    SolarMoonOutline,
-    SolarSun2Outline,
+    FontAwesomeSunBright,
+    FontAwesomePalette,
+    FontAwesomeMoon,
 } from '@components/icon/Icon';
 
 interface MenuType {
@@ -60,15 +60,15 @@ export const listLanguage: LanguageType[] = [
 
 export const listTheme: ThemeType[] = [
     {
-        icon: SolarSun2Outline(),
+        icon: FontAwesomeSunBright(),
         key: 'light',
     },
     {
-        icon: SolarMoonOutline(),
+        icon: FontAwesomeMoon(),
         key: 'dark',
     },
     {
-        icon: SolarLaptopMinimalisticOutline(),
+        icon: FontAwesomePalette(),
         key: 'system',
     },
 ];

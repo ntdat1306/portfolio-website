@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { listMenu } from '@utils/constants/navbar';
 import useLanguage from '@hooks/useLanguage';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SolarUndoLeftRoundOutline } from '@components/icon/Icon';
+import { FontAwesomeXMark } from '@components/icon/Icon';
 import useNavbar from '@hooks/useNavbar';
 
 interface ResponsiveMenuProps {
@@ -50,12 +50,12 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = (props) => {
                         className={styles['responsive-menu']}
                     >
                         <div className={styles['header']}>
-                            <div className={styles['logo']}>
+                            <Link to='/' className={styles['logo']} onClick={handleToggle}>
                                 <div className={styles['icon']}>{logo}</div>
-                                <div className={styles['text']}>NTD</div>
-                            </div>
+                                <div className={styles['text']}>ntd/portfolio</div>
+                            </Link>
                             <div className={styles['btn-close']} onClick={handleToggle}>
-                                <SolarUndoLeftRoundOutline />
+                                <FontAwesomeXMark />
                             </div>
                         </div>
                         <div className={styles['menu']}>{listItems}</div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Navbar.module.scss';
 import { Link } from 'react-router-dom';
 import useNavbar from '@hooks/useNavbar';
-import { SolarListOutline } from '@components/icon/Icon';
+import { FontAwesomeBarsSort } from '@components/icon/Icon';
 import { Menu } from './components/Menu';
 import { Language } from './components/Language';
 import { Theme } from './components/Theme';
@@ -31,13 +31,13 @@ const Navbar = () => {
                 <div className={styles['left']}>
                     {showExpand ? (
                         <div className={styles['expand']} onClick={handleToggle}>
-                            <SolarListOutline />
+                            <FontAwesomeBarsSort />
                         </div>
                     ) : (
                         <>
                             <Link to='/' className={styles['logo']}>
                                 <div className={styles['icon']}>{logo}</div>
-                                <div className={styles['text']}>NTD</div>
+                                <div className={styles['text']}>ntd/portfolio</div>
                             </Link>
                             <Menu />
                         </>
