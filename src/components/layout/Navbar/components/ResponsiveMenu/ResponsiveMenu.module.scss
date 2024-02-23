@@ -30,16 +30,7 @@
             cursor: pointer;
 
             .icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 2.25rem;
-                height: 2.25rem;
-
-                svg {
-                    border-radius: 50%;
-                    font-size: var(--font-l);
-                }
+                @include icon;
             }
 
             .text {

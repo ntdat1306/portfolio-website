@@ -1,3 +1,4 @@
+@use '@assets/styles/mixinResponsive' as *;
 @use '@assets/styles/mixinPadding' as *;
 
 .home {
@@ -14,17 +15,26 @@
         text-align: center;
         color: rgb(var(--foreground));
 
+        @include responsive(landscapePhone) {
+            padding: 2rem 0;
+        }
+
         .line1 {
             font-size: var(--font-s);
             background: rgb(var(--muted));
             border-radius: var(--radius-m);
             padding: 0.25rem 0.5rem;
+            font-weight: 500;
         }
 
         .line2 {
             font-size: 3.75rem;
             letter-spacing: var(--letter-spacing-h2);
             font-weight: 700;
+
+            @include responsive(landscapePhone) {
+                font-size: 1.875rem;
+            }
         }
 
         .line3 {
@@ -32,21 +42,43 @@
             letter-spacing: var(--letter-spacing-h2);
             color: rgb(var(--muted-foreground));
             font-size: var(--font-l);
+            max-width: 36rem;
+
+            @include responsive(landscapePhone) {
+                max-width: 30rem;
+                font-size: 1.125rem;
+            }
+
+            @include responsive(portraitPhone) {
+                max-width: 20rem;
+            }
         }
 
-        .avatar {
-            width: 75%;
-            max-width: 24rem;
-            aspect-ratio: 1/1;
-            border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
-            overflow: hidden;
-            background: rgb(var(--muted));
-            // margin-top: -3rem;
-            opacity: 0.8;
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+            gap: 1rem;
+            padding: 1rem 0;
 
-            img {
-                width: 100%;
-                height: 100%;
+            .btn-primary {
+                background: rgb(var(--primary));
+                color: rgb(var(--primary-foreground));
+                padding: 0.5rem 1rem;
+                border-radius: var(--radius-m);
+                border: 1px solid rgb(var(--primary));
+                box-shadow: var(--shadow-sm);
+                cursor: pointer;
+            }
+
+            .btn-secondary {
+                background: rgb(var(--background));
+                padding: 0.5rem 1rem;
+                border-radius: var(--radius-m);
+                border: 1px solid rgb(var(--border));
+                box-shadow: var(--shadow-sm);
+                cursor: pointer;
             }
         }
     }
