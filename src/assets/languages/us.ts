@@ -13,4 +13,14 @@ export const US = {
             system: 'System',
         },
     },
+    page: {
+        home: {
+            hero: {
+                line1: "Hi, i'm Dat",
+                line2: 'ReactJS Developer',
+                line3: 'Basic portfolio base on shadcn/ui design',
+                download: 'Download CV',
+            },
+        },
+    },
 };

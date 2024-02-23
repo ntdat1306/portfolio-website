@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from '@pages/home';
+import { Home } from '@pages/home';
 import Experience from '@pages/experience';
 import Layout from './pages';
 import LanguageContextProvider from '@context/LanguageContext';
