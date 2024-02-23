@@ -56,8 +56,9 @@
     .menu {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
         padding-left: 2.25rem;
+        margin-top: 0.5rem;
 
         .item {
             display: flex;
