@@ -1,0 +1,122 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinPadding' as *;
+@use '@assets/styles/mixinIcon' as *;
+
+.navbar {
+    position: fixed;
+    inset: 0;
+    height: var(--height-navbar);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(var(--background), 0.6);
+    padding: var(--padding);
+    border-bottom: 1px solid rgba(var(--border), 0.4);
+    backdrop-filter: blur(0.5rem);
+    font-size: var(--font-s);
+    letter-spacing: var(--letter-spacing-body-2);
+    color: rgba(var(--foreground));
+
+    @include padding;
+
+    .left {
+        display: flex;
+        gap: 1.5rem;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .icon {
+                @include icon(circle);
+            }
+
+            .text {
+                font-weight: 700;
+                letter-spacing: var(--letter-spacing-body-1);
+            }
+        }
+
+        .expand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+
+            svg {
+                font-size: var(--font-l);
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+
+        .setting {
+            color: rgba(var(--foreground));
+            display: flex;
+        }
+    }
+}
+
+.responsive-menu {
+    position: fixed;
+    inset: 0;
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+    height: 100%;
+    width: 75%;
+    max-width: 24rem;
+    border-right: 1px solid rgb(var(--border));
+    box-shadow: var(--shadow-lg);
+    padding: 1rem;
+    font-size: var(--font-s);
+
+    @include responsive(portraitPhone) {
+        max-width: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.25rem;
+                height: 2.25rem;
+
+                svg {
+                    border-radius: 50%;
+                    font-size: var(--font-l);
+                }
+            }
+
+            .text {
+                font-weight: 700;
+                letter-spacing: var(--letter-spacing-body-1);
+            }
+        }
+
+        .btn-close {
+            @include icon;
+        }
+    }
+}
+
+.bg-blur {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+}

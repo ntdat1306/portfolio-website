@@ -1,0 +1,17 @@
+@mixin icon($corner: normal) {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        font-size: var(--font-l);
+    }
+
+    @if $corner == circle {
+        svg {
+            border-radius: 50%;
+        }
+    }
+}

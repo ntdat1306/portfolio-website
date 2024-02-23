@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    gap: 1.5rem;
+
+    .item {
+        display: flex;
+        align-items: center;
+        border-radius: var(--radius-m);
+        opacity: 0.6;
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

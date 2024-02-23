@@ -1,0 +1,60 @@
+@use '@assets/styles/mixinIcon' as *;
+
+.theme {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    position: relative;
+
+    &:hover {
+        background: rgba(var(--muted));
+        border-radius: var(--radius-m);
+    }
+
+    .icon {
+        @include icon;
+    }
+
+    .list {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.2s ease-out;
+        padding-top: 0.25rem;
+        border-radius: var(--radius-m);
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.125rem;
+            background: rgba(var(--background));
+            padding: 0.25rem;
+            border: 1px solid rgba(var(--border));
+            border-radius: var(--radius-m);
+
+            .item {
+                padding: 0.375rem 0.5rem;
+                border-radius: var(--radius-s);
+                transition: all 0.2s ease-out;
+                opacity: 0.6;
+
+                &:hover {
+                    background: rgba(var(--muted));
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+
+                .text {
+                    width: max-content;
+                }
+            }
+        }
+    }
+}
