@@ -57,7 +57,7 @@
             border: 1px solid rgb(var(--border));
 
             @include responsive(landscapePhone) {
-                padding:  0.75rem 1rem 0.75rem 0.75rem;
+                padding: 0.75rem 1rem 0.75rem 0.75rem;
             }
 
             .icon {

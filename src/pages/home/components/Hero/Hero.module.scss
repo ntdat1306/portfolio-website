@@ -23,9 +23,15 @@
         padding: 0.25rem 0.5rem;
         font-weight: 500;
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
-        gap: 0.25rem;
+        gap: 0.5rem;
+
+        .divider {
+            width: 1px;
+            background: rgb(var(--border));
+            flex-shrink: 0;
+        }
     }
 
     .line2 {
@@ -43,7 +49,7 @@
         font-size: 1.25rem;
         letter-spacing: var(--letter-spacing-h6);
         color: rgb(var(--muted-foreground));
-        max-width: 36rem;
+        max-width: 40rem;
 
         @include responsive(landscapePhone) {
             max-width: 30rem;
