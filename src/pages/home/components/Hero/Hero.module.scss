@@ -40,20 +40,16 @@
     }
 
     .line3 {
-        font-size: 2.125rem;
-        letter-spacing: var(--letter-spacing-h4);
+        font-size: 1.25rem;
+        letter-spacing: var(--letter-spacing-h6);
         color: rgb(var(--muted-foreground));
         max-width: 36rem;
 
         @include responsive(landscapePhone) {
-            font-size: 1.5rem;
-            letter-spacing: var(--letter-spacing-h5);
             max-width: 30rem;
         }
 
         @include responsive(portraitPhone) {
-            font-size: 1.25rem;
-            letter-spacing: var(--letter-spacing-h6);
             max-width: 20rem;
         }
     }

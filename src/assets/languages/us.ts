@@ -18,7 +18,7 @@ export const US = {
             hero: {
                 line1: "Hi, i'm Dat",
                 line2: 'ReactJS Developer',
-                line3: 'Welcome to my portfolio. Hope we can work together. Thanks for your time!',
+                line3: 'Scroll down to see more and hope we can work together. Thanks for your time!',
                 primary: 'Download CV',
                 secondary: 'Explore now',
             },
