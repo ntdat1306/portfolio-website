@@ -21,6 +21,7 @@
 
         .line1 {
             font-size: var(--font-s);
+            letter-spacing: var(--letter-spacing-body-2);
             background: rgb(var(--muted));
             border-radius: var(--radius-m);
             padding: 0.25rem 0.5rem;
@@ -39,7 +40,7 @@
 
         .line3 {
             font-size: 3.75rem;
-            letter-spacing: var(--letter-spacing-h2);
+            letter-spacing: var(--letter-spacing-h3);
             color: rgb(var(--muted-foreground));
             font-size: var(--font-l);
             max-width: 36rem;
@@ -61,6 +62,7 @@
             flex-flow: row wrap;
             gap: 1rem;
             padding: 1rem 0;
+            font-size: var(--font-s);
 
             .btn-primary {
                 background: rgb(var(--primary));
