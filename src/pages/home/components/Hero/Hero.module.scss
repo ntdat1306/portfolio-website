@@ -1,0 +1,89 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinPadding' as *;
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 3rem 0 2rem;
+    text-align: center;
+    color: rgb(var(--foreground));
+
+    @include responsive(landscapePhone) {
+        padding: 2rem 0 1rem;
+    }
+
+    .line1 {
+        font-size: var(--font-s);
+        letter-spacing: var(--letter-spacing-body-2);
+        background: rgb(var(--muted));
+        border-radius: var(--radius-m);
+        padding: 0.25rem 0.5rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .line2 {
+        font-size: 3.75rem;
+        letter-spacing: var(--letter-spacing-h2);
+        font-weight: 700;
+
+        @include responsive(landscapePhone) {
+            font-size: 3rem;
+            letter-spacing: var(--letter-spacing-h3);
+        }
+    }
+
+    .line3 {
+        font-size: 2.125rem;
+        letter-spacing: var(--letter-spacing-h4);
+        color: rgb(var(--muted-foreground));
+        max-width: 36rem;
+
+        @include responsive(landscapePhone) {
+            font-size: 1.5rem;
+            letter-spacing: var(--letter-spacing-h5);
+            max-width: 30rem;
+        }
+
+        @include responsive(portraitPhone) {
+            font-size: 1.25rem;
+            letter-spacing: var(--letter-spacing-h6);
+            max-width: 20rem;
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        gap: 1rem;
+        padding: 1rem 0;
+        font-size: var(--font-s);
+
+        .btn-primary {
+            background: rgb(var(--primary));
+            color: rgb(var(--primary-foreground));
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-m);
+            border: 1px solid rgb(var(--primary));
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            background: rgb(var(--background));
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-m);
+            border: 1px solid rgb(var(--border));
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+        }
+    }
+}

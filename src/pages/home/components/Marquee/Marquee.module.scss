@@ -1,0 +1,86 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinIcon' as *;
+
+.marquee {
+    overflow: hidden;
+    position: relative;
+    color: rgb(var(--foreground));
+
+    // &::before,
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     width: 4rem;
+    //     height: 100%;
+    //     z-index: 1;
+    // }
+
+    // &::before {
+    //     left: 0;
+    //     background: linear-gradient(to left, rgba(var(--background), 0), rgb(var(--background)));
+    // }
+
+    // &::after {
+    //     right: 0;
+    //     background: linear-gradient(to right, rgba(var(--background), 0), rgb(var(--background)));
+    // }
+
+    .slide {
+        white-space: nowrap;
+        display: flex;
+        gap: 1rem;
+
+        &.ltr {
+            animation: 30s ltr infinite linear;
+            justify-content: flex-end;
+        }
+
+        &.rtl {
+            animation: 30s rtl infinite linear;
+            justify-content: flex-start;
+        }
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        .item {
+            padding: 1rem 1.25rem 1rem 1rem;
+            background: rgb(var(--background));
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            gap: 0.5rem;
+            border: 1px solid rgb(var(--border));
+
+            @include responsive(landscapePhone) {
+                padding:  0.75rem 1rem 0.75rem 0.75rem;
+            }
+
+            .icon {
+                @include icon(no-corner, no-expand);
+            }
+        }
+    }
+}
+
+@keyframes rtl {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ltr {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}

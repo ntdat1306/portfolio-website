@@ -16,7 +16,7 @@
     }
 
     .icon {
-        @include icon;
+        @include icon(no-corner, expand);
     }
 
     .list {

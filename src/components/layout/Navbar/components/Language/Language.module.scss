@@ -16,7 +16,7 @@
     }
 
     .icon {
-        @include icon(circle);
+        @include icon(circle, expand);
     }
 
     .list {

@@ -30,7 +30,7 @@
             cursor: pointer;
 
             .icon {
-                @include icon;
+                @include icon(no-corner, expand);
             }
 
             .text {
@@ -40,7 +40,7 @@
         }
 
         .btn-close {
-            @include icon;
+            @include icon(no-corner, expand);
         }
     }
 

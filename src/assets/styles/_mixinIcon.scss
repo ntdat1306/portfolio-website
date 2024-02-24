@@ -1,6 +1,4 @@
-@mixin icon($corner: normal) {
-    width: 2.25rem;
-    height: 2.25rem;
+@mixin icon($corner: no-corner, $expand: no-expand) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,5 +11,10 @@
         svg {
             border-radius: 50%;
         }
+    }
+
+    @if $expand == expand {
+        width: 2.25rem;
+        height: 2.25rem;
     }
 }
