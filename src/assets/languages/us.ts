@@ -17,10 +17,10 @@ export const US = {
         home: {
             hero: {
                 line1: "Hi, i'm Dat",
-                line2: 'ReactJS Developer',
+                line2: 'Frontend Developer',
                 line3: 'Scroll down to see my information and hope we can work together. Thanks for your time!',
                 primary: 'Download CV',
-                secondary: 'Explore now',
+                secondary: 'Preview CV',
             },
         },
     },

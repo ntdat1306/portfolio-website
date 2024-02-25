@@ -17,9 +17,10 @@ export const VN = {
         home: {
             hero: {
                 line1: 'Xin chào, mình là Đạt',
-                line2: 'ReactJS Developer',
-                line3: 'Lướt xuống để khám phá và cảm ơn vì đã dành thời gian nhé ^^',
-                download: 'Tải xuống CV',
+                line2: 'Frontend Developer',
+                line3: 'Lướt xuống để xem thông tin của mình và hi vọng chúng ta có thể làm việc cùng nhau ^^',
+                primary: 'Tải xuống CV',
+                secondary: 'Xem trước CV',
             },
         },
     },
