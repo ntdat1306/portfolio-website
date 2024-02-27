@@ -146,6 +146,28 @@ export function FontAwesomeLink(props?: SVGProps<SVGSVGElement>) {
     );
 }
 
+export function FontAwesomeBriefcaseBlankRegular(props?: SVGProps<SVGSVGElement>) {
+    return (
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 512 512' {...props}>
+            <path
+                fill='currentColor'
+                d='M176 56V96H336V56c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zM128 96V56c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56V96h64c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64zm232 48H152 64c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16H360z'
+            />
+        </svg>
+    );
+}
+
+export function FontAwesomeClockRegular(props?: SVGProps<SVGSVGElement>) {
+    return (
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 512 512' {...props}>
+            <path
+                fill='currentColor'
+                d='M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z'
+            />
+        </svg>
+    );
+}
+
 // Marquee
 export function VscodeIconsFileTypeReactjs(props?: SVGProps<SVGSVGElement>) {
     return (

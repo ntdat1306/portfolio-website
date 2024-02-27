@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Experience.module.scss';
 import useLanguage from '@hooks/useLanguage';
 import { listItemExperience } from '@utils/constants/home';
-import { FontAwesomeLink } from '@components/icon/Icon';
+import { FontAwesomeBriefcaseBlankRegular, FontAwesomeLink, FontAwesomeClockRegular } from '@components/icon/Icon';
 
 const Experience = () => {
     const dataLanguage = useLanguage();
@@ -17,14 +17,28 @@ const Experience = () => {
                     </div>
                 </div>
                 <div className={styles['bottom']}>
+                    {/* Company */}
                     <div className={styles['company']}>
                         {dataLanguage?.page?.home?.experience?.card?.[item.key]?.company}
                     </div>
-
+                    {/* Position */}
                     <div className={styles['position']}>
-                        {dataLanguage?.page?.home?.experience?.card?.[item.key]?.position}
+                        <div className={styles['icon']}>
+                            <FontAwesomeBriefcaseBlankRegular />
+                        </div>
+                        <div className={styles['text']}>
+                            {dataLanguage?.page?.home?.experience?.card?.[item.key]?.position}
+                        </div>
                     </div>
-                    <div className={styles['date']}>{dataLanguage?.page?.home?.experience?.card?.[item.key]?.date}</div>
+                    {/* Date */}
+                    <div className={styles['date']}>
+                        <div className={styles['icon']}>
+                            <FontAwesomeClockRegular />
+                        </div>
+                        <div className={styles['text']}>
+                            {dataLanguage?.page?.home?.experience?.card?.[item.key]?.date}
+                        </div>
+                    </div>
                 </div>
             </div>
 
