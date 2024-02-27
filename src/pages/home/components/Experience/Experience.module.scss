@@ -2,7 +2,11 @@
 @use '@assets/styles/mixinIcon' as *;
 
 .experience {
-    margin: 4rem 0;
+    margin: 6rem 0;
+
+    @include responsive(landscapePhone) {
+        margin: 4rem 0;
+    }
 
     .title {
         display: flex;
@@ -10,8 +14,12 @@
         gap: 0.5rem;
         background: rgb(var(--background));
         color: rgb(var(--foreground));
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 600;
+
+        @include responsive(landscapePhone) {
+            font-size: 1.5rem;
+        }
     }
 
     .card-group {
@@ -31,8 +39,8 @@
             border: 1px solid rgb(var(--border));
             border-radius: var(--radius-m);
             padding: 1.5rem;
-            box-shadow: var(--shadow);
-            
+            box-shadow: var(--shadow-sm);
+
             .header {
                 display: flex;
                 flex-direction: column;
@@ -120,7 +128,6 @@
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
-                    box-shadow: var(--shadow-sm);
                     transition: all 0.2s ease-in-out;
                     cursor: pointer;
 
