@@ -22,6 +22,29 @@ export const US = {
                 primary: 'Download CV',
                 secondary: 'Preview CV',
             },
+            experience: {
+                title: 'Experience',
+                card: {
+                    experience1: {
+                        company: 'AKIRA EDUCATION COMPANY LIMITED',
+                        position: 'Frontend Developer',
+                        date: '12/2023 - 02/2024',
+                        description: [
+                            '- Optimize code base on previous version',
+                            '- Develop Chrome extension using ReactJS',
+                        ],
+                    },
+                    experience2: {
+                        company: 'THANH CONG DV TRANSPORT COMPANY LIMITED',
+                        position: 'Frontend Developer',
+                        date: '04/2022 - 12/2023',
+                        description: [
+                            '- Design and code website using ReactJS',
+                            '- Develop Chrome extension using ReactJS',
+                        ],
+                    },
+                },
+            },
         },
     },
 };

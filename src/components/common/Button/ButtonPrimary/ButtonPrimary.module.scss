@@ -1,0 +1,22 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinIcon' as *;
+
+.btn-primary {
+    display: flex;
+    gap: 0.5rem;
+    background: rgb(var(--primary));
+    color: rgb(var(--primary-foreground));
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-m);
+    border: 1px solid rgb(var(--primary));
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(var(--primary), 0.9);
+    }
+
+    .icon {
+        @include icon(no-corner, no-expand);
+    }
+}

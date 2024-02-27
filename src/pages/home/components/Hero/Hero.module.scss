@@ -67,25 +67,35 @@
         flex-flow: row wrap;
         gap: 1rem;
         padding: 1rem 0;
-        font-size: var(--font-s);
 
         .btn-primary {
             background: rgb(var(--primary));
             color: rgb(var(--primary-foreground));
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1rem;
             border-radius: var(--radius-m);
             border: 1px solid rgb(var(--primary));
             box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease-in-out;
+
             cursor: pointer;
+
+            &:hover {
+                background: rgba(var(--primary), 0.9);
+            }
         }
 
         .btn-secondary {
             background: rgb(var(--background));
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1rem;
             border-radius: var(--radius-m);
             border: 1px solid rgb(var(--border));
             box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease-in-out;
             cursor: pointer;
+
+            &:hover {
+                background: rgb(var(--accent));
+            }
         }
     }
 }

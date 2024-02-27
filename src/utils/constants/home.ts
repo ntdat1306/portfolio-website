@@ -14,6 +14,9 @@ import {
     VscodeIconsFileTypeWebpack,
 } from '../../components/icon/Icon';
 
+import AkiraLogo from '@assets/images/akira-company.png';
+import TCLogo from '@assets/images/tc-company.jpg';
+
 interface ItemMarqueeType {
     icon: JSX.Element;
     text: string;
@@ -74,5 +77,24 @@ export const listItemMarqueeRtl: ItemMarqueeType[] = [
     {
         icon: VscodeIconsFileTypeFirebase(),
         text: 'Firebase',
+    },
+];
+
+export const listItemExperience = [
+    {
+        key: 'experience1',
+        logo: AkiraLogo,
+        website: {
+            text: 'Website',
+            link: 'https://akira.edu.vn/',
+        },
+    },
+    {
+        key: 'experience2',
+        logo: TCLogo,
+        website: {
+            text: 'Website',
+            link: 'https://www.vantaithanhcong.net/',
+        },
     },
 ];

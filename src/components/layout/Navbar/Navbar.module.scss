@@ -17,6 +17,7 @@
     font-size: var(--font-s);
     letter-spacing: var(--letter-spacing-body-2);
     color: rgba(var(--foreground));
+    z-index: 999;
 
     @include padding;
 
