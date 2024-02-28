@@ -1,5 +1,6 @@
 @use '@assets/styles/mixinResponsive' as *;
 @use '@assets/styles/mixinPadding' as *;
+@use '@assets/styles/mixinIcon' as *;
 
 .hero {
     display: flex;
@@ -19,12 +20,16 @@
         letter-spacing: var(--letter-spacing-body-2);
         background: rgb(var(--muted));
         border-radius: var(--radius-m);
-        padding: 0.25rem 0.5rem;
+        padding: 0.5rem 1rem;
         font-weight: 500;
         display: flex;
         align-items: stretch;
         justify-content: center;
         gap: 0.5rem;
+
+        .icon {
+            @include icon(no-corner, no-expand);
+        }
 
         .divider {
             width: 1px;

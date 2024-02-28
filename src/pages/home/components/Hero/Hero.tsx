@@ -3,6 +3,7 @@ import styles from './Hero.module.scss';
 import useLanguage from '@hooks/useLanguage';
 import { Link } from 'react-router-dom';
 import CV from '@assets/files/CV.pdf';
+import { FontAwesomePartyHornRegular } from '@components/icon/Icon';
 
 const Hero = () => {
     const dataLanguage = useLanguage();
@@ -10,7 +11,9 @@ const Hero = () => {
     return (
         <div className={styles['hero']}>
             <div className={styles['line1']}>
-                <div>🎉</div>
+                <div className={styles['icon']}>
+                    <FontAwesomePartyHornRegular />
+                </div>
                 <div className={styles['divider']}></div>
                 <div>{dataLanguage?.page?.home?.hero?.line1}</div>
             </div>
