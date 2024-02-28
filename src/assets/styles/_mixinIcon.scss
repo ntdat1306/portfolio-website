@@ -4,7 +4,7 @@
     justify-content: center;
 
     svg {
-        font-size: var(--font-l);
+        font-size: 1.25rem;
     }
 
     @if $corner == circle {

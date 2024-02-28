@@ -43,7 +43,19 @@ export const VN = {
                             '- Phát triển extension Chrome bằng ReactJS',
                         ],
                     },
+                    experience3: {
+                        company: 'CÔNG TY CỔ PHẦN VCCORP',
+                        position: 'Thực tập sinh',
+                        date: '07/2023 - 8/2023',
+                        description: [
+                            '- Refactor API từ MongoDB sang MySQL',
+                            '- Code giao diện cho e-commerce website bằng ReactJS',
+                        ],
+                    },
                 },
+            },
+            skill: {
+                title: 'Kĩ năng',
             },
         },
     },

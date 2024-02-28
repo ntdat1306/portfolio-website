@@ -8,6 +8,7 @@ interface MarqueeProps {
 
 const Marquee: React.FC<MarqueeProps> = (props) => {
     const { data, direction } = props;
+    
     const listItems = [...Array(10).keys()].reduce((accumulator: any, currentValue) => {
         const elements = data.map((item, index) => (
             <div key={item.text + index + currentValue + ''} className={styles['item']}>

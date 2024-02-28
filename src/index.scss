@@ -1,5 +1,6 @@
 @use '@assets/styles/mixinLightMode' as *;
 @use '@assets/styles/mixinDarkMode' as *;
+@use '@assets/styles/mixinResponsive' as *;
 @import '@assets/styles/resetCss';
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
@@ -30,11 +31,12 @@
 
     --radius-s: 0.25rem;
     --radius-m: 0.5rem;
-    --radius-l: 1rem;
+    --radius-l: 0.75rem;
+    --radius-xl: 1rem;
 
-    --font-s: 0.875rem;
-    --font-m: 1rem;
-    --font-l: 1.25rem;
+    --font-s: 14px;
+    --font-m: 16px;
+    --font-l: 18px;
 
     // Letter spacing for Roboto font (https://m2.material.io/design/typography/the-type-system.html#type-scale)
     --letter-spacing-h1: -1.5px;
@@ -77,6 +79,10 @@ body {
     min-height: 100vh;
     background: rgba(var(--background));
     letter-spacing: var(--letter-spacing-body-1);
+
+    @include responsive(landscapePhone) {
+        font-size: 14px;
+    }
 }
 
 a {

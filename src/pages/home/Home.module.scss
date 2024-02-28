@@ -7,8 +7,20 @@
     margin-top: var(--height-navbar);
 
     .marquee-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
+        margin-top: 5rem;
+
+        .title {
+            background: rgb(var(--background));
+            color: rgb(var(--foreground));
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .marquee-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
     }
 }

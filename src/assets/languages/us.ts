@@ -43,7 +43,19 @@ export const US = {
                             '- Develop Chrome extension using ReactJS',
                         ],
                     },
+                    experience3: {
+                        company: 'VCCORP CORPORATION',
+                        position: 'Internship',
+                        date: '07/2023 - 8/2023',
+                        description: [
+                            '- Refactor API from MongoDB to MySQL',
+                            '- Code UI for e-commerce website using ReactJS',
+                        ],
+                    },
                 },
+            },
+            skill: {
+                title: 'Skill',
             },
         },
     },

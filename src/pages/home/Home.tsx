@@ -4,9 +4,10 @@ import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 import { listItemExperience, listItemMarqueeLtr, listItemMarqueeRtl } from '@utils/constants/home';
 import useLanguage from '@hooks/useLanguage';
-import { FontAwesomeLink } from '@components/icon/Icon';
+import { FontAwesomeLink, FontAwesomeSparkle } from '@components/icon/Icon';
 import { ButtonSecondary } from '@components/common/Button/ButtonSecondary';
 import { Experience } from './components/Experience';
+import { Ribbon } from './components/Ribbon';
 
 const Home = () => {
     const dataLanguage = useLanguage();
@@ -14,11 +15,16 @@ const Home = () => {
     return (
         <div className={styles['home']}>
             <Hero />
-            <div className={styles['marquee-container']}>
-                <Marquee data={listItemMarqueeLtr} direction='ltr' />
-                <Marquee data={listItemMarqueeRtl} direction='rtl' />
-            </div>
+            <Ribbon />
             <Experience />
+
+            <div className={styles['marquee-container']}>
+                <div className={styles['title']}>{dataLanguage?.page?.home?.skill?.title}</div>
+                <div className={styles['marquee-group']}>
+                    <Marquee data={listItemMarqueeLtr} direction='ltr' />
+                    <Marquee data={listItemMarqueeRtl} direction='rtl' />
+                </div>
+            </div>
         </div>
     );
 };

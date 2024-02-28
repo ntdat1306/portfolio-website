@@ -15,7 +15,8 @@ import {
 } from '../../components/icon/Icon';
 
 import AkiraLogo from '@assets/images/akira-company.png';
-import TCLogo from '@assets/images/tc-company.jpg';
+import TCLogo from '@assets/images/tc-company.png';
+import VCCorpLogo from '@assets/images/vccorp-company.png';
 
 interface ItemMarqueeType {
     icon: JSX.Element;
@@ -95,6 +96,14 @@ export const listItemExperience = [
         website: {
             text: 'Website',
             link: 'https://www.vantaithanhcong.net/',
+        },
+    },
+    {
+        key: 'experience3',
+        logo: VCCorpLogo,
+        website: {
+            text: 'Website',
+            link: 'https://vccorp.vn/',
         },
     },
 ];

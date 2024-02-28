@@ -1,0 +1,67 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinIcon' as *;
+
+.ribbon-container {
+    position: relative;
+
+    margin: 0 0 12rem;
+
+    @include responsive(landscapePhone) {
+        margin: 4rem 0 8rem;
+    }
+
+    .ribbon {
+        overflow: hidden;
+        position: relative;
+        padding: 0.75rem;
+
+        &.top {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            transform: rotate(-6deg);
+            background: rgb(var(--background));
+            color: rgb(var(--foreground));
+            border-top: 1px solid rgb(var(--border));
+            border-bottom: 1px solid rgb(var(--border));
+
+            @include responsive(landscapePhone) {
+                transform: rotate(-8deg);
+            }
+        }
+
+        &.bottom {
+            // transform: rotate(4deg) translate(0, 100%);
+            // transform-origin: 100% 0;
+            background: rgb(var(--primary));
+            color: rgb(var(--primary-foreground));
+        }
+
+        .slide {
+            white-space: nowrap;
+            display: flex;
+            gap: 4rem;
+            transform: translateX(-50%);
+
+            @include responsive(landscapePhone) {
+                gap: 2rem;
+            }
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                gap: 4rem;
+
+                @include responsive(landscapePhone) {
+                    gap: 1rem;
+                }
+
+                .icon {
+                    @include icon(no-corner, no-expand);
+                }
+            }
+        }
+    }
+}

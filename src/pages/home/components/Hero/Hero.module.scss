@@ -7,7 +7,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 3rem 0 2rem;
+    padding: 6rem 0 5rem;
     text-align: center;
     color: rgb(var(--foreground));
 
@@ -16,7 +16,6 @@
     }
 
     .line1 {
-        font-size: var(--font-s);
         letter-spacing: var(--letter-spacing-body-2);
         background: rgb(var(--muted));
         border-radius: var(--radius-m);
