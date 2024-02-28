@@ -2,18 +2,14 @@
 @use '@assets/styles/mixinIcon' as *;
 
 .experience {
-    margin-top: 5rem;
-
-    @include responsive(landscapePhone) {
-        margin: 4rem 0;
-    }
+    margin-top: 6rem;
 
     .title {
         display: flex;
         gap: 0.5rem;
         background: rgb(var(--background));
         color: rgb(var(--foreground));
-        font-size: 1.75rem;
+        font-size: 2rem;
         font-weight: 600;
     }
 
