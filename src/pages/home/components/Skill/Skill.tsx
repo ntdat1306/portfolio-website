@@ -5,6 +5,7 @@ import { Marquee } from '../Marquee';
 import { FontAwesomeRectangleCodeRegular } from '@components/icon/Icon';
 import { listItemMarqueeLtr, listItemMarqueeRtl } from '@utils/constants/home';
 import useLanguage from '@hooks/useLanguage';
+import Reveal from '@components/animate/Reveal/Reveal';
 
 const Skill = () => {
     const dataLanguage = useLanguage();

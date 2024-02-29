@@ -19,15 +19,23 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = (props) => {
     const { logo } = useNavbar();
     const location = useLocation();
 
+    const handleScroll = (path: string) => {
+        const element = document.getElementById(path);
+        const rect = element?.getBoundingClientRect();
+        if (rect) window.scrollTo(0, window.scrollY + rect?.top - 80);
+    };
+
     const listItems = listMenu.map((item) => (
-        <Link
-            to={item.path}
+        <div
             key={item.key}
             className={`${styles['item']} ${item.path === location.pathname ? styles['active'] : ''}`}
-            onClick={handleToggle}
+            onClick={() => {
+                handleScroll(item.path);
+                handleToggle();
+            }}
         >
             {dataLanguage?.navbar?.menu?.[item.key]}
-        </Link>
+        </div>
     ));
 
     return (
