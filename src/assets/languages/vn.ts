@@ -96,6 +96,7 @@ export const VN = {
                         ],
                     },
                 },
+                link: 'Đã triển khai',
             },
             skill: {
                 title: 'Kĩ năng',

@@ -117,33 +117,29 @@ export const listItemProject = [
     {
         key: 'project1',
         image: MochiProject,
-        website: {
-            text: 'Deployed',
-            link: 'https://chromewebstore.google.com/detail/mochi-dictionary-t%E1%BB%AB-%C4%91i%E1%BB%83n/ejmmioggcokagpjlajeilkakgphhmmbj?hl=vi',
-        },
+        website:
+            'https://chromewebstore.google.com/detail/mochi-dictionary-t%E1%BB%AB-%C4%91i%E1%BB%83n/ejmmioggcokagpjlajeilkakgphhmmbj?hl=vi',
+        deploy: true,
         technology: ['ReactJS', 'SCSS'],
     },
     {
         key: 'project2',
         image: TCProject,
-        website: {
-            text: 'Deployed',
-            link: 'https://chromewebstore.google.com/detail/tc-extension/aghobpphojjkdknpdkfdmmhaidjlndlf?hl=vi',
-        },
+        website: 'https://chromewebstore.google.com/detail/tc-extension/aghobpphojjkdknpdkfdmmhaidjlndlf?hl=vi',
+        deploy: true,
         technology: ['ReactJS', 'TypeScript', 'SCSS', 'Flask'],
     },
     {
         key: 'project3',
         image: TransportationProject,
-        website: {
-            text: 'Deployed',
-            link: 'https://www.vantaithanhcong.net/',
-        },
+        website: 'https://www.vantaithanhcong.net/',
+        deploy: true,
         technology: ['ReactJS', 'TypeScript', 'SCSS', 'Google App Script'],
     },
     {
         key: 'project4',
         image: EcommerceProject,
+        deploy: false,
         technology: ['ReactJS', 'NodeJS'],
     },
 ];

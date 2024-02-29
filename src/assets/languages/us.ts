@@ -93,6 +93,7 @@ export const US = {
                         ],
                     },
                 },
+                link: 'Deployed',
             },
             skill: {
                 title: 'Skill',

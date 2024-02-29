@@ -58,13 +58,13 @@ const Project = () => {
                     </div>
                 </div>
                 {/* Footer */}
-                {item?.website?.text && (
+                {item?.deploy && (
                     <div className={styles['footer']}>
-                        <a href={item?.website?.link} target='_blank' className={styles['btn-view-website']}>
+                        <a href={item?.website} target='_blank' className={styles['btn-view-website']}>
                             <div className={styles['icon']}>
                                 <FontAwesomeLink />
                             </div>
-                            <div className={styles['text']}>{item?.website?.text}</div>
+                            <div className={styles['text']}>{dataLanguage?.page?.home?.project?.link}</div>
                         </a>
                     </div>
                 )}

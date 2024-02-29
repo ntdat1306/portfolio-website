@@ -25,6 +25,7 @@
 
         .container {
             display: flex;
+            align-items: center;
             gap: 4rem;
             background: rgb(var(--card));
             color: rgb(var(--card-foreground));
@@ -46,11 +47,12 @@
             }
 
             .image {
-                max-width: 50%;
+                width: 50%;
                 aspect-ratio: 16/9;
+                flex-shrink: 0;
 
                 @include responsive(landscapePhone) {
-                    max-width: 100%;
+                    width: 100%;
                 }
 
                 img {
@@ -121,7 +123,7 @@
                 }
 
                 .body {
-                    margin: 1rem 0;
+                    margin-top: 1rem;
 
                     .technology-container {
                         margin-top: 0.5rem;
@@ -145,6 +147,8 @@
                 }
 
                 .footer {
+                    margin-top: 1rem;
+                    
                     .btn-view-website {
                         background: rgb(var(--primary));
                         color: rgb(var(--primary-foreground));
