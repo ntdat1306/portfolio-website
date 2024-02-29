@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './Project.module.scss';
 
-import { FontAwesomeBriefcaseBlankRegular, FontAwesomeClockRegular, FontAwesomeLink } from '@components/icon/Icon';
+import {
+    FontAwesomeBriefcaseBlankRegular,
+    FontAwesomeClockRegular,
+    FontAwesomeLink,
+    FontAwesomeNewspaperRegular,
+} from '@components/icon/Icon';
 import useLanguage from '@hooks/useLanguage';
 import { listItemProject } from '@utils/constants/home';
+import { Title } from '@components/ui/Title';
 
 const Project = () => {
     const dataLanguage = useLanguage();
@@ -74,7 +80,7 @@ const Project = () => {
 
     return (
         <div className={styles['project']}>
-            <div className={styles['title']}>{dataLanguage?.page?.home?.project?.title}</div>
+            <Title icon={<FontAwesomeNewspaperRegular />} text={dataLanguage?.page?.home?.project?.title} />
             <div className={styles['project-group']}>{listCard}</div>
         </div>
     );

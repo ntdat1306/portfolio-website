@@ -2,25 +2,15 @@
 @use '@assets/styles/mixinIcon' as *;
 
 .project {
-    margin-top: 6rem;
-
-    .title {
-        display: flex;
-        gap: 0.5rem;
-        background: rgb(var(--background));
-        color: rgb(var(--foreground));
-        font-size: 2rem;
-        font-weight: 600;
-    }
+    margin-top: 4rem;
 
     .project-group {
         display: flex;
         flex-direction: column;
         gap: 4rem;
-        margin-top: 1.5rem;
 
         @include responsive(landscapePhone) {
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .container {
@@ -148,7 +138,7 @@
 
                 .footer {
                     margin-top: 1rem;
-                    
+
                     .btn-view-website {
                         background: rgb(var(--primary));
                         color: rgb(var(--primary-foreground));

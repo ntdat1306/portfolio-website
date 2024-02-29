@@ -2,7 +2,13 @@ import React from 'react';
 import styles from './Experience.module.scss';
 import useLanguage from '@hooks/useLanguage';
 import { listItemExperience } from '@utils/constants/home';
-import { FontAwesomeBriefcaseBlankRegular, FontAwesomeLink, FontAwesomeClockRegular } from '@components/icon/Icon';
+import {
+    FontAwesomeBriefcaseBlankRegular,
+    FontAwesomeLink,
+    FontAwesomeClockRegular,
+    FontAwesomeBuildingRegular,
+} from '@components/icon/Icon';
+import { Title } from '@components/ui/Title';
 
 const Experience = () => {
     const dataLanguage = useLanguage();
@@ -67,7 +73,7 @@ const Experience = () => {
 
     return (
         <div className={styles['experience']}>
-            <div className={styles['title']}>{dataLanguage?.page?.home?.experience?.title}</div>
+            <Title icon={<FontAwesomeBuildingRegular />} text={dataLanguage?.page?.home?.experience?.title} />
             <div className={styles['card-group']}>{listCard}</div>
         </div>
     );

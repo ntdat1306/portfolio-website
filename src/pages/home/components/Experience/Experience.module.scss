@@ -4,15 +4,6 @@
 .experience {
     margin-top: 6rem;
 
-    .title {
-        display: flex;
-        gap: 0.5rem;
-        background: rgb(var(--background));
-        color: rgb(var(--foreground));
-        font-size: 2rem;
-        font-weight: 600;
-    }
-
     .card-group {
         display: flex;
         justify-content: center;
@@ -22,8 +13,8 @@
         .card-container {
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
-            margin-top: 1.5rem;
             padding: 0 0.75rem;
+            margin-bottom: 2rem;
 
             @include responsive(desktop) {
                 flex: 0 0 50%;
