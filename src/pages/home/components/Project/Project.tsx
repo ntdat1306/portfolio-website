@@ -79,7 +79,7 @@ const Project = () => {
     ));
 
     return (
-        <div className={styles['project']}>
+        <div className={styles['project']} id='project'>
             <Title icon={<FontAwesomeNewspaperRegular />} text={dataLanguage?.page?.home?.project?.title} />
             <div className={styles['project-group']}>{listCard}</div>
         </div>

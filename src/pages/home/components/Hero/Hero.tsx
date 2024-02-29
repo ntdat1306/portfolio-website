@@ -9,7 +9,7 @@ const Hero = () => {
     const dataLanguage = useLanguage();
 
     return (
-        <div className={styles['hero']}>
+        <div className={styles['hero']} id='hero'>
             <div className={styles['line1']}>
                 <div className={styles['icon']}>
                     <FontAwesomePartyHornRegular />

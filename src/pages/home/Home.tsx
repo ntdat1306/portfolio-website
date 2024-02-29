@@ -10,6 +10,7 @@ import { Experience } from './components/Experience';
 import { Ribbon } from './components/Ribbon';
 import { Project } from './components/Project';
 import { Title } from '@components/ui/Title';
+import { Skill } from './components/Skill';
 
 const Home = () => {
     const dataLanguage = useLanguage();
@@ -20,14 +21,7 @@ const Home = () => {
             <Ribbon />
             <Experience />
             <Project />
-            {/* Marquee */}
-            <div className={styles['marquee-container']}>
-                <Title icon={<FontAwesomeRectangleCodeRegular />} text={dataLanguage?.page?.home?.skill?.title} />
-                <div className={styles['marquee-group']}>
-                    <Marquee data={listItemMarqueeLtr} direction='ltr' />
-                    <Marquee data={listItemMarqueeRtl} direction='rtl' />
-                </div>
-            </div>
+            <Skill />
         </div>
     );
 };

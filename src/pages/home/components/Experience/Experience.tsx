@@ -72,7 +72,7 @@ const Experience = () => {
     ));
 
     return (
-        <div className={styles['experience']}>
+        <div className={styles['experience']} id='experience'>
             <Title icon={<FontAwesomeBuildingRegular />} text={dataLanguage?.page?.home?.experience?.title} />
             <div className={styles['card-group']}>{listCard}</div>
         </div>

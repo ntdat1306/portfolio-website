@@ -24,23 +24,23 @@ interface ThemeType {
 
 export const listMenu: MenuType[] = [
     {
-        path: '/',
+        path: 'hero',
         key: 'home',
     },
     {
-        path: '/experience',
+        path: 'experience',
         key: 'experience',
     },
     {
-        path: '/project',
+        path: 'project',
         key: 'project',
     },
     {
-        path: '/skill',
+        path: 'skill',
         key: 'skill',
     },
     {
-        path: '/contact',
+        path: 'contact',
         key: 'contact',
     },
 ];
