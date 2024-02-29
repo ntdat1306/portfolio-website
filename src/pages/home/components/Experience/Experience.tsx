@@ -6,7 +6,6 @@ import {
     FontAwesomeBriefcaseBlankRegular,
     FontAwesomeLink,
     FontAwesomeClockRegular,
-    FontAwesomeBuildingRegular,
 } from '@components/icon/Icon';
 import { Title } from '@components/ui/Title';
 import Reveal from '@components/animate/Reveal/Reveal';
@@ -76,7 +75,7 @@ const Experience = () => {
 
     return (
         <div className={styles['experience']} id='experience'>
-            <Title icon={<FontAwesomeBuildingRegular />} text={dataLanguage?.page?.home?.experience?.title} />
+            <Title text={dataLanguage?.page?.home?.experience?.title} />
             <div className={styles['card-group']}>{listCard}</div>
         </div>
     );

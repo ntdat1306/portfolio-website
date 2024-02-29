@@ -5,7 +5,6 @@ import {
     FontAwesomeBriefcaseBlankRegular,
     FontAwesomeClockRegular,
     FontAwesomeLink,
-    FontAwesomeNewspaperRegular,
 } from '@components/icon/Icon';
 import useLanguage from '@hooks/useLanguage';
 import { listItemProject } from '@utils/constants/home';
@@ -85,7 +84,7 @@ const Project = () => {
 
     return (
         <div className={styles['project']} id='project'>
-            <Title icon={<FontAwesomeNewspaperRegular />} text={dataLanguage?.page?.home?.project?.title} />
+            <Title text={dataLanguage?.page?.home?.project?.title} />
             <div className={styles['project-group']}>{listCard}</div>
         </div>
     );
