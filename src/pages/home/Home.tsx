@@ -8,6 +8,7 @@ import { FontAwesomeLink, FontAwesomeSparkle } from '@components/icon/Icon';
 import { ButtonSecondary } from '@components/common/Button/ButtonSecondary';
 import { Experience } from './components/Experience';
 import { Ribbon } from './components/Ribbon';
+import { Project } from './components/Project';
 
 const Home = () => {
     const dataLanguage = useLanguage();
@@ -17,7 +18,7 @@ const Home = () => {
             <Hero />
             <Ribbon />
             <Experience />
-
+            <Project />
             <div className={styles['marquee-container']}>
                 <div className={styles['title']}>{dataLanguage?.page?.home?.skill?.title}</div>
                 <div className={styles['marquee-group']}>

@@ -18,6 +18,11 @@ import AkiraLogo from '@assets/images/akira-company.png';
 import TCLogo from '@assets/images/tc-company.png';
 import VCCorpLogo from '@assets/images/vccorp-company.png';
 
+import MochiProject from '@assets/images/mochi-project.png';
+import TCProject from '@assets/images/tc-project.png';
+import TransportationProject from '@assets/images/transportation-project.png';
+import EcommerceProject from '@assets/images/ecommerce-project.png';
+
 interface ItemMarqueeType {
     icon: JSX.Element;
     text: string;
@@ -105,5 +110,40 @@ export const listItemExperience = [
             text: 'Website',
             link: 'https://vccorp.vn/',
         },
+    },
+];
+
+export const listItemProject = [
+    {
+        key: 'project1',
+        image: MochiProject,
+        website: {
+            text: 'Deployed',
+            link: 'https://chromewebstore.google.com/detail/mochi-dictionary-t%E1%BB%AB-%C4%91i%E1%BB%83n/ejmmioggcokagpjlajeilkakgphhmmbj?hl=vi',
+        },
+        technology: ['ReactJS', 'SCSS'],
+    },
+    {
+        key: 'project2',
+        image: TCProject,
+        website: {
+            text: 'Deployed',
+            link: 'https://chromewebstore.google.com/detail/tc-extension/aghobpphojjkdknpdkfdmmhaidjlndlf?hl=vi',
+        },
+        technology: ['ReactJS', 'TypeScript', 'SCSS', 'Flask'],
+    },
+    {
+        key: 'project3',
+        image: TransportationProject,
+        website: {
+            text: 'Deployed',
+            link: 'https://www.vantaithanhcong.net/',
+        },
+        technology: ['ReactJS', 'TypeScript', 'SCSS', 'Google App Script'],
+    },
+    {
+        key: 'project4',
+        image: EcommerceProject,
+        technology: ['ReactJS', 'NodeJS'],
     },
 ];

@@ -54,6 +54,49 @@ export const VN = {
                     },
                 },
             },
+            project: {
+                title: 'Dự án',
+                card: {
+                    project1: {
+                        name: 'MOCHI DICTIONARY',
+                        position: 'Frontend Developer',
+                        date: '12/2023 - 02/2024',
+                        description: [
+                            '- Phát triển extension v2',
+                            '- Maintain và tối ưu code phục vụ cho 100.000+ người dùng',
+                        ],
+                    },
+                    project2: {
+                        name: 'TC EXTENSION',
+                        position: 'Frontend + Backend',
+                        date: '12/2023 - 01/2024',
+                        description: [
+                            '- Tích hợp chatbot vào Zalo và ZaloOA',
+                            '- Tích hợp chức năng tính giá vận chuyển vào Google Maps',
+                            '- Thêm chức năng dự đoán giá vận chuyển sử dụng học máy cơ bản',
+                        ],
+                    },
+                    project3: {
+                        name: 'TRANSPORTATION WEBSITE',
+                        position: 'Frontend Developer',
+                        date: '09/2023 - 10/2023',
+                        description: [
+                            '- Thiết kế và lập trình giao diện website, phát triển tính năng chuyển đổi ngôn ngữ có khả năng mở rộng',
+                            '- Tích hợp API Google Maps vào tính năng đặt xe và tự động tính giá',
+                        ],
+                    },
+                    project4: {
+                        name: 'E-COMMERCE WEBSITE',
+                        position: 'Frontend + Backend',
+                        date: '05/2023 - 09/2023',
+                        description: [
+                            '- Code giao diện admin và client',
+                            '- Sử dụng JWT xác thực và phân quyền người dùng, crawl dữ liệu từ ViettelPost làm API location',
+                            '- Tìm hiểu transactions trong quá trình mua hàng, sử dụng Multer lưu ảnh trên server và Sharp để cắt ảnh',
+                        ],
+                    },
+                },
+            },
             skill: {
                 title: 'Kĩ năng',
             },

@@ -42,7 +42,7 @@ const Experience = () => {
                         </div>
                     </div>
                 </div>
-
+                {/* Body */}
                 <div className={styles['body']}>
                     {dataLanguage?.page?.home?.experience?.card?.[item.key]?.description.map(
                         (item: any, index: number) => (
@@ -52,7 +52,7 @@ const Experience = () => {
                         )
                     )}
                 </div>
-
+                {/* Footer */}
                 <div className={styles['footer']}>
                     <a href={item?.website?.link} target='_blank' className={styles['btn-view-website']}>
                         <div className={styles['icon']}>
@@ -68,9 +68,7 @@ const Experience = () => {
     return (
         <div className={styles['experience']}>
             <div className={styles['title']}>{dataLanguage?.page?.home?.experience?.title}</div>
-            <div className={styles['card-group']}>
-                {listCard}
-            </div>
+            <div className={styles['card-group']}>{listCard}</div>
         </div>
     );
 };

@@ -1,0 +1,172 @@
+@use '@assets/styles/mixinResponsive' as *;
+@use '@assets/styles/mixinIcon' as *;
+
+.project {
+    margin-top: 6rem;
+
+    .title {
+        display: flex;
+        gap: 0.5rem;
+        background: rgb(var(--background));
+        color: rgb(var(--foreground));
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .project-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 1.5rem;
+
+        @include responsive(landscapePhone) {
+            gap: 1.5rem;
+        }
+
+        .container {
+            display: flex;
+            gap: 4rem;
+            background: rgb(var(--card));
+            color: rgb(var(--card-foreground));
+
+            @include responsive(landscapePhone) {
+                flex-direction: column !important;
+                gap: 1.5rem;
+                padding: 1.5rem;
+                border: 1px solid rgb(var(--border));
+                border-radius: var(--radius-m);
+                box-shadow: var(--shadow);
+                background: rgb(var(--card));
+                color: rgb(var(--card-foreground));
+            }
+
+            &.reverse {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+
+            .image {
+                max-width: 50%;
+                aspect-ratio: 16/9;
+
+                @include responsive(landscapePhone) {
+                    max-width: 100%;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: var(--radius-m);
+                    box-shadow: var(--shadow);
+
+                    @include responsive(landscapePhone) {
+                        box-shadow: var(--shadow-sm);
+                    }
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                max-width: 50%;
+
+                @include responsive(landscapePhone) {
+                    max-width: 100%;
+                }
+
+                .header {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.125rem;
+
+                    .name {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-size: 1.125rem;
+                    }
+
+                    .position {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        .icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .text {
+                            font-weight: 500;
+                        }
+                    }
+
+                    .date {
+                        color: rgb(var(--muted-foreground));
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        .icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .text {
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .body {
+                    margin: 1rem 0;
+
+                    .technology-container {
+                        margin-top: 0.5rem;
+                        display: flex;
+                        gap: 0.5rem;
+                        flex-wrap: wrap;
+
+                        .technology {
+                            background: rgb(var(--secondary));
+                            color: rgb(var(--secondary-foreground));
+                            width: fit-content;
+                            padding: 0.25rem 0.5rem;
+                            border-radius: var(--radius-m);
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            transition: all 0.2s ease-in-out;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .footer {
+                    .btn-view-website {
+                        background: rgb(var(--primary));
+                        color: rgb(var(--primary-foreground));
+                        width: fit-content;
+                        padding: 0.5rem 1rem;
+                        border-radius: var(--radius-m);
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        transition: all 0.2s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: rgba(var(--primary), 0.9);
+                        }
+
+                        .icon {
+                            @include icon(no-corner, no-expand);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
