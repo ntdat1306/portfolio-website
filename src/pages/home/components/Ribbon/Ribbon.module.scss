@@ -4,7 +4,7 @@
 .ribbon-container {
     position: relative;
 
-    margin: 0 0 12rem;
+    margin: 2rem 0 12rem;
 
     @include responsive(landscapePhone) {
         margin: 4rem 0 8rem;
@@ -19,7 +19,7 @@
             position: absolute;
             inset: 0;
             z-index: 1;
-            transform: rotate(-6deg);
+            transform: rotate(-4deg);
             background: rgb(var(--background));
             color: rgb(var(--foreground));
             border-top: 1px solid rgb(var(--border));
@@ -28,13 +28,28 @@
             @include responsive(landscapePhone) {
                 transform: rotate(-8deg);
             }
+
+            .slide {
+                animation: 30s ltr infinite linear;
+                justify-content: flex-end;
+            }
         }
 
         &.bottom {
             // transform: rotate(4deg) translate(0, 100%);
             // transform-origin: 100% 0;
+            transform: rotate(4deg);
             background: rgb(var(--primary));
             color: rgb(var(--primary-foreground));
+
+            @include responsive(landscapePhone) {
+                transform: rotate(8deg);
+            }
+
+            .slide {
+                animation: 30s rtl infinite linear;
+                justify-content: flex-start;
+            }
         }
 
         .slide {
@@ -42,6 +57,14 @@
             display: flex;
             gap: 4rem;
             transform: translateX(-50%);
+
+            &:hover {
+                animation-play-state: paused;
+
+                .item .icon {
+                    animation-play-state: paused;
+                }
+            }
 
             @include responsive(landscapePhone) {
                 gap: 2rem;
@@ -60,8 +83,36 @@
 
                 .icon {
                     @include icon(no-corner, no-expand);
+                    animation: 30s rotate infinite linear;
                 }
             }
         }
+    }
+}
+
+@keyframes rtl {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ltr {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
