@@ -23,7 +23,10 @@ export const VN = {
                 secondary: 'Xem trước CV',
             },
             experience: {
-                title: 'Kinh nghiệm',
+                title: {
+                    text: 'Kinh nghiệm',
+                    description: 'Mình đã làm ở đâu?',
+                },
                 card: {
                     experience1: {
                         company: 'CÔNG TY TNHH GIÁO DỤC AKIRA',
@@ -55,7 +58,10 @@ export const VN = {
                 },
             },
             project: {
-                title: 'Dự án',
+                title: {
+                    text: 'Dự án',
+                    description: 'Mình đã làm những gì?',
+                },
                 card: {
                     project1: {
                         name: 'MOCHI DICTIONARY',
@@ -99,7 +105,10 @@ export const VN = {
                 link: 'Đã triển khai',
             },
             skill: {
-                title: 'Kĩ năng',
+                title: {
+                    text: 'Kĩ năng',
+                    description: 'Mình đã học cái gì?',
+                },
             },
         },
     },

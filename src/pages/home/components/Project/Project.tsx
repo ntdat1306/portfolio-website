@@ -84,7 +84,10 @@ const Project = () => {
 
     return (
         <div className={styles['project']} id='project'>
-            <Title text={dataLanguage?.page?.home?.project?.title} />
+            <Title
+                text={dataLanguage?.page?.home?.project?.title?.text}
+                description={dataLanguage?.page?.home?.project?.title?.description}
+            />
             <div className={styles['project-group']}>{listCard}</div>
         </div>
     );

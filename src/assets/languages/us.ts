@@ -23,7 +23,10 @@ export const US = {
                 secondary: 'Preview CV',
             },
             experience: {
-                title: 'Experience',
+                title: {
+                    text: 'Experience',
+                    description: 'Where I worked?',
+                },
                 card: {
                     experience1: {
                         company: 'AKIRA EDUCATION COMPANY LIMITED',
@@ -55,7 +58,10 @@ export const US = {
                 },
             },
             project: {
-                title: 'Project',
+                title: {
+                    text: 'Project',
+                    description: 'What I did?',
+                },
                 card: {
                     project1: {
                         name: 'MOCHI DICTIONARY',
@@ -96,7 +102,10 @@ export const US = {
                 link: 'Deployed',
             },
             skill: {
-                title: 'Skill',
+                title: {
+                    text: 'Skill',
+                    description: 'Which I used?',
+                },
             },
         },
     },

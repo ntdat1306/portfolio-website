@@ -11,7 +11,10 @@ const Skill = () => {
 
     return (
         <div className={styles['skill']} id='skill'>
-            <Title text={dataLanguage?.page?.home?.skill?.title} />
+            <Title
+                text={dataLanguage?.page?.home?.skill?.title?.text}
+                description={dataLanguage?.page?.home?.skill?.title?.description}
+            />
             <Reveal>
                 <div className={styles['skill-group']}>
                     <Marquee data={listItemMarqueeLtr} direction='ltr' />

@@ -2,11 +2,7 @@ import React from 'react';
 import styles from './Experience.module.scss';
 import useLanguage from '@hooks/useLanguage';
 import { listItemExperience } from '@utils/constants/home';
-import {
-    FontAwesomeBriefcaseBlankRegular,
-    FontAwesomeLink,
-    FontAwesomeClockRegular,
-} from '@components/icon/Icon';
+import { FontAwesomeBriefcaseBlankRegular, FontAwesomeLink, FontAwesomeClockRegular } from '@components/icon/Icon';
 import { Title } from '@components/ui/Title';
 import Reveal from '@components/animate/Reveal/Reveal';
 
@@ -75,7 +71,10 @@ const Experience = () => {
 
     return (
         <div className={styles['experience']} id='experience'>
-            <Title text={dataLanguage?.page?.home?.experience?.title} />
+            <Title
+                text={dataLanguage?.page?.home?.experience?.title?.text}
+                description={dataLanguage?.page?.home?.experience?.title?.description}
+            />
             <div className={styles['card-group']}>{listCard}</div>
         </div>
     );
