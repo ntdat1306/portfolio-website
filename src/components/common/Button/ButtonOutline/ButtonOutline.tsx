@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './ButtonPrimary.module.scss';
+import styles from './ButtonOutline.module.scss';
 
-interface ButtonPrimaryProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonOutlineProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     text: string;
     startIcon?: JSX.Element;
     endIcon?: JSX.Element;
 }
 
-const ButtonPrimary: React.FC<ButtonPrimaryProps> = (props) => {
+const ButtonOutline: React.FC<ButtonOutlineProps> = (props) => {
     const { text, startIcon, endIcon, ...attributes } = props;
 
     return (
-        <button className={styles['btn-primary']} {...attributes}>
+        <button className={styles['btn-outline']} {...attributes}>
             <div className='icon'>{startIcon}</div>
             {text}
             <div className='icon'> {endIcon}</div>
@@ -19,4 +19,4 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = (props) => {
     );
 };
 
-export default ButtonPrimary;
+export default ButtonOutline;

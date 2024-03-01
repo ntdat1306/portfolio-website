@@ -107,6 +107,23 @@ export const US = {
                     description: 'Which I used?',
                 },
             },
+            contact: {
+                title: {
+                    text: 'Get contact now!',
+                    description: 'Choose your way to contact with me',
+                },
+                main: {
+                    left: {
+                        text: 'Message, call or add Zalo by phone number',
+                        button: 'Phone',
+                    },
+                    right: {
+                        text: 'Send your contact or feedback by email address',
+                        button: 'Gmail',
+                    },
+                    or: 'or',
+                },
+            },
         },
     },
 };

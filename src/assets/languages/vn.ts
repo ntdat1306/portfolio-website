@@ -110,6 +110,23 @@ export const VN = {
                     description: 'Mình đã học cái gì?',
                 },
             },
+            contact: {
+                title: {
+                    text: 'Liên hệ ngay!',
+                    description: 'Chọn cách thức liên hệ với mình',
+                },
+                main: {
+                    left: {
+                        text: 'Nhắn tin, gọi hoặc kết bạn Zalo bằng số điện thoại',
+                        button: 'Phone',
+                    },
+                    right: {
+                        text: 'Gửi thông tin hoặc phản hồi bằng địa chỉ email',
+                        button: 'Gmail',
+                    },
+                    or: 'or',
+                },
+            },
         },
     },
 };
