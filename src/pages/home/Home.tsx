@@ -6,6 +6,7 @@ import { Ribbon } from './components/Ribbon';
 import { Project } from './components/Project';
 import { Skill } from './components/Skill';
 import { Contact } from './components/Contact';
+import { Copyright } from './components/Copyright';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Project />
             <Skill />
             <Contact />
+            <Copyright />
         </div>
     );
 };

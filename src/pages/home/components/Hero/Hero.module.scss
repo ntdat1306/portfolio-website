@@ -96,6 +96,9 @@
             box-shadow: var(--shadow-sm);
             transition: all 0.2s ease-in-out;
             cursor: pointer;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
 
             &:hover {
                 background: rgb(var(--accent));

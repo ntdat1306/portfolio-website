@@ -20,7 +20,7 @@ export const US = {
                 line2: 'Frontend Developer',
                 line3: 'Scroll down to see my information and hope we can work together. Thanks for your time!',
                 primary: 'Download CV',
-                secondary: 'Preview CV',
+                secondary: 'Explore now',
             },
             experience: {
                 title: {
@@ -93,9 +93,9 @@ export const US = {
                         position: 'Frontend + Backend',
                         date: '05/2023 - 09/2023',
                         description: [
-                            '- Code admin dashboar and client page',
-                            '- Use JWT to authenticate and authorize users, crawl data from ViettelPost as API location',
-                            '- Learn transactions during the purchase process, use Multer to save images on the server and Sharp to crop images',
+                            '- Code admin dashboard and client page',
+                            '- Learn transactions, use JWT to authenticate and authorize users',
+                            '- Use Multer library to save and Sharp library to crop images in server',
                         ],
                     },
                 },
@@ -104,7 +104,7 @@ export const US = {
             skill: {
                 title: {
                     text: 'Skill',
-                    description: 'Which I used?',
+                    description: "What I've learned?",
                 },
             },
             contact: {
@@ -115,15 +115,18 @@ export const US = {
                 main: {
                     left: {
                         text: 'Message, call or add Zalo by phone number',
+                        info: '(+84) 36 223 1916',
                         button: 'Phone',
                     },
                     right: {
                         text: 'Send your contact or feedback by email address',
+                        info: 'ntdat1306@gmail.com',
                         button: 'Gmail',
                     },
                     or: 'or',
                 },
             },
+            copyright: 'Copyright © ntdat/portfolio',
         },
     },
 };

@@ -8,6 +8,16 @@ import { FontAwesomePartyHornRegular } from '@components/icon/Icon';
 const Hero = () => {
     const dataLanguage = useLanguage();
 
+    const handleScroll = (path: string) => {
+        const element = document.getElementById(path);
+        const rect = element?.getBoundingClientRect();
+        if (rect) window.scrollTo(0, window.scrollY + rect?.top - 80);
+    };
+
+    const handleClickSecondary = () => {
+        handleScroll('experience');
+    };
+
     return (
         <div className={styles['hero']} id='hero'>
             <div className={styles['line1']}>
@@ -29,7 +39,9 @@ const Hero = () => {
                 >
                     {dataLanguage?.page?.home?.hero?.primary}
                 </Link>
-                <div className={styles['btn-secondary']}>{dataLanguage?.page?.home?.hero?.secondary}</div>
+                <div className={styles['btn-secondary']} onClick={handleClickSecondary}>
+                    {dataLanguage?.page?.home?.hero?.secondary}
+                </div>
             </div>
         </div>
     );

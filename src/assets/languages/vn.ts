@@ -20,7 +20,7 @@ export const VN = {
                 line2: 'Frontend Developer',
                 line3: 'Lướt xuống để xem thông tin về mình và rất hi vọng chúng ta có thể làm việc cùng nhau ^^',
                 primary: 'Tải xuống CV',
-                secondary: 'Xem trước CV',
+                secondary: 'Khám phá ngay',
             },
             experience: {
                 title: {
@@ -97,8 +97,8 @@ export const VN = {
                         date: '05/2023 - 09/2023',
                         description: [
                             '- Code giao diện admin và client',
-                            '- Sử dụng JWT xác thực và phân quyền người dùng, crawl dữ liệu từ ViettelPost làm API location',
-                            '- Tìm hiểu transactions trong quá trình mua hàng, sử dụng Multer lưu ảnh trên server và Sharp để cắt ảnh',
+                            '- Tìm hiểu về transactions, sử dụng JWT xác thực và phân quyền người dùng',
+                            '- Sử dụng Multer lưu ảnh và Sharp để cắt ảnh trên server',
                         ],
                     },
                 },
@@ -118,15 +118,18 @@ export const VN = {
                 main: {
                     left: {
                         text: 'Nhắn tin, gọi hoặc kết bạn Zalo bằng số điện thoại',
-                        button: 'Phone',
+                        info: '036 223 1916',
+                        button: 'Liên hệ ngay',
                     },
                     right: {
                         text: 'Gửi thông tin hoặc phản hồi bằng địa chỉ email',
-                        button: 'Gmail',
+                        info: 'ntdat1306@gmail.com',
+                        button: 'Liên hệ ngay',
                     },
                     or: 'or',
                 },
             },
+            copyright: 'Copyright © ntdat/portfolio',
         },
     },
 };
