@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.scss';
 import useLanguage from '@hooks/useLanguage';
-import { Link } from 'react-router-dom';
 import CV from '@assets/files/CV.pdf';
 import { FontAwesomePartyHornRegular } from '@components/icon/Icon';
 
@@ -30,15 +29,15 @@ const Hero = () => {
             <div className={styles['line2']}>{dataLanguage?.page?.home?.hero?.line2}</div>
             <div className={styles['line3']}>{dataLanguage?.page?.home?.hero?.line3}</div>
             <div className={styles['btn-container']}>
-                <Link
-                    to={CV}
+                <a
+                    href={CV}
                     download='Nguyễn Tiến Đạt - ReactJS Developer'
                     target='_blank'
                     rel='noreferrer'
                     className={styles['btn-primary']}
                 >
                     {dataLanguage?.page?.home?.hero?.primary}
-                </Link>
+                </a>
                 <div className={styles['btn-secondary']} onClick={handleClickSecondary}>
                     {dataLanguage?.page?.home?.hero?.secondary}
                 </div>
